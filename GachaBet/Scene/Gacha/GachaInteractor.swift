@@ -29,7 +29,11 @@ class GachaInteractor: GachaInteractorInterface {
   }
   
   func getHistory(request: Gacha.GetHistory.Request) {
-    let response = Gacha.GetHistory.Response(result: report(resultArray: resultArray), history: resultArray)
+    var historyData: [History.HistoryTableCell]
+    for item in resultArray {
+      historyData.append(History.HistoryTableCell(rarity: item, name: randomNameFromRarity(rarity: item)))
+    }
+    let response = Gacha.GetHistory.Response(result: report(resultArray: resultArray), history: resultArray, historyTable: historyData)
     presenter.presentHistory(response: response)
   }
   
@@ -45,7 +49,7 @@ class GachaInteractor: GachaInteractorInterface {
     }
     return false
   }
-
+  
   private func checkGarunteeSR() -> Bool {
     print("GARUNTEESR\(garunteeSR)")
     if garunteeSR.count >= 9 {
@@ -58,7 +62,7 @@ class GachaInteractor: GachaInteractorInterface {
     }
     return false
   }
-
+  
   private func letDraw() {
     let chanceSSR: Float = 0.6
     let chanceSR: Float = 5.1
@@ -77,7 +81,7 @@ class GachaInteractor: GachaInteractorInterface {
       garunteeSSR.append("SR")
       garunteeSR.removeAll()
     }
-      else {
+    else {
       if checkGarunteeSR() {
         garunteeSSR.append("SR")
         return }
@@ -88,7 +92,27 @@ class GachaInteractor: GachaInteractorInterface {
       garunteeSSR.append("R")
     }
   }
-
+  
+  private func randomNameFromRarity(rarity: String) -> String {
+    switch rarity {
+    case "SSR":
+      let ssrCharacter = ["Venti", "Clee", "Chlide"]
+      if let randomSSRChar = ssrCharacter.randomElement() {
+        return randomSSRChar
+      }
+    case "SR":
+      let srCharacter = ["Fichl", "Barbara", "Ningguang"]
+      if let randomSRChar = srCharacter.randomElement() {
+        return randomSRChar
+      }
+    default:
+      let rCharacter = ["Sword", "Bow", "Megic", "Poleang"]
+      if let randomRChar = rCharacter.randomElement() {
+        return randomRChar
+      }
+    }
+  }
+  
   func report(resultArray: [String]) -> String {
     var ssrCount = 0
     var srCount = 0

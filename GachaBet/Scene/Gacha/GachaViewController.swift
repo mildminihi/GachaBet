@@ -46,7 +46,7 @@ class GachaViewController: UIViewController, GachaViewControllerInterfacr {
   }
   
   func displayHistory(viewModel: Gacha.GetHistory.ViewModel) {
-    let alert = UIAlertController(title: viewModel.result, message: viewModel.history.joined(separator: ","), preferredStyle: .alert)
+    let alert = UIAlertController(title: "Draw total: \(viewModel.history.count)"+" time, Get total: "+viewModel.result, message: viewModel.history.joined(separator: ","), preferredStyle: .alert)
     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(UIAlertAction) -> Void in }))
     present(alert, animated: true)
   }

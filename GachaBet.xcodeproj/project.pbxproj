@@ -18,6 +18,13 @@
 		2D0D98C42567ED6F0039A8EB /* GachaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D98C32567ED6F0039A8EB /* GachaInteractor.swift */; };
 		2D0D98C62567ED7E0039A8EB /* GachaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D98C52567ED7E0039A8EB /* GachaPresenter.swift */; };
 		2D0D98C82567ED8C0039A8EB /* GachaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D98C72567ED8C0039A8EB /* GachaModel.swift */; };
+		754B316E256C017400428ACD /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B316D256C017400428ACD /* HistoryViewController.swift */; };
+		754B3172256C019E00428ACD /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B3170256C019E00428ACD /* HistoryTableViewCell.swift */; };
+		754B3173256C019E00428ACD /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754B3171256C019E00428ACD /* HistoryTableViewCell.xib */; };
+		754B3175256C021A00428ACD /* HistoryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 754B3174256C021A00428ACD /* HistoryStoryboard.storyboard */; };
+		754B3177256C053E00428ACD /* HistoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B3176256C053E00428ACD /* HistoryInteractor.swift */; };
+		754B3179256C054C00428ACD /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B3178256C054C00428ACD /* HistoryPresenter.swift */; };
+		754B317B256C055B00428ACD /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B317A256C055B00428ACD /* HistoryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +41,13 @@
 		2D0D98C32567ED6F0039A8EB /* GachaInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GachaInteractor.swift; sourceTree = "<group>"; };
 		2D0D98C52567ED7E0039A8EB /* GachaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GachaPresenter.swift; sourceTree = "<group>"; };
 		2D0D98C72567ED8C0039A8EB /* GachaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GachaModel.swift; sourceTree = "<group>"; };
+		754B316D256C017400428ACD /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		754B3170256C019E00428ACD /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		754B3171256C019E00428ACD /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
+		754B3174256C021A00428ACD /* HistoryStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HistoryStoryboard.storyboard; sourceTree = "<group>"; };
+		754B3176256C053E00428ACD /* HistoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryInteractor.swift; sourceTree = "<group>"; };
+		754B3178256C054C00428ACD /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
+		754B317A256C055B00428ACD /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +95,7 @@
 		2D0D98BB2567EBD20039A8EB /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				754B316C256C015100428ACD /* History */,
 				2D0D98BC2567EBDC0039A8EB /* Gacha */,
 			);
 			path = Scene;
@@ -96,6 +111,28 @@
 				2D0D98C72567ED8C0039A8EB /* GachaModel.swift */,
 			);
 			path = Gacha;
+			sourceTree = "<group>";
+		};
+		754B316C256C015100428ACD /* History */ = {
+			isa = PBXGroup;
+			children = (
+				754B316F256C017D00428ACD /* Cell */,
+				754B316D256C017400428ACD /* HistoryViewController.swift */,
+				754B3174256C021A00428ACD /* HistoryStoryboard.storyboard */,
+				754B3176256C053E00428ACD /* HistoryInteractor.swift */,
+				754B3178256C054C00428ACD /* HistoryPresenter.swift */,
+				754B317A256C055B00428ACD /* HistoryModel.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		754B316F256C017D00428ACD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				754B3170256C019E00428ACD /* HistoryTableViewCell.swift */,
+				754B3171256C019E00428ACD /* HistoryTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +194,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D0D98B42567EBBF0039A8EB /* LaunchScreen.storyboard in Resources */,
+				754B3173256C019E00428ACD /* HistoryTableViewCell.xib in Resources */,
+				754B3175256C021A00428ACD /* HistoryStoryboard.storyboard in Resources */,
 				2D0D98B12567EBBF0039A8EB /* Assets.xcassets in Resources */,
 				2D0D98C22567EC5C0039A8EB /* GachaStoryboard.storyboard in Resources */,
 				2D0D98AF2567EBBC0039A8EB /* Main.storyboard in Resources */,
@@ -170,13 +209,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				754B3179256C054C00428ACD /* HistoryPresenter.swift in Sources */,
+				754B3172256C019E00428ACD /* HistoryTableViewCell.swift in Sources */,
 				2D0D98AC2567EBBC0039A8EB /* ViewController.swift in Sources */,
 				2D0D98A82567EBBC0039A8EB /* AppDelegate.swift in Sources */,
 				2D0D98AA2567EBBC0039A8EB /* SceneDelegate.swift in Sources */,
 				2D0D98BF2567EC190039A8EB /* GachaViewController.swift in Sources */,
 				2D0D98C42567ED6F0039A8EB /* GachaInteractor.swift in Sources */,
 				2D0D98C82567ED8C0039A8EB /* GachaModel.swift in Sources */,
+				754B317B256C055B00428ACD /* HistoryModel.swift in Sources */,
+				754B3177256C053E00428ACD /* HistoryInteractor.swift in Sources */,
 				2D0D98C62567ED7E0039A8EB /* GachaPresenter.swift in Sources */,
+				754B316E256C017400428ACD /* HistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
