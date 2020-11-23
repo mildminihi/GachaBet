@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ijs-UF-Tyg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Gacha View Controller-->
+        <scene sceneID="3St-Fc-VBC">
+            <objects>
+                <viewController id="Fq1-sD-hpQ" customClass="GachaViewController" customModule="GachaBet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ynf-yB-4hq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPr-Qp-Fr0">
+                                <rect key="frame" x="20" y="680" width="88" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="DRAW 1"/>
+                                <connections>
+                                    <action selector="clickDrawOneTime:" destination="Fq1-sD-hpQ" eventType="touchUpInside" id="Z0s-7N-Ivk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRe-n0-QnB">
+                                <rect key="frame" x="290" y="680" width="104" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="DRAW 10"/>
+                                <connections>
+                                    <action selector="clickDrawTenTime:" destination="Fq1-sD-hpQ" eventType="touchUpInside" id="edr-1D-UwY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just Draw" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Yz-aB-OxM">
+                                <rect key="frame" x="115" y="68" width="184" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="8WT-9w-2cq"/>
+                                    <constraint firstAttribute="height" constant="80" id="zaz-aP-9rY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvD-Xv-FtP">
+                                <rect key="frame" x="182" y="772" width="50" height="30"/>
+                                <state key="normal" title="History"/>
+                                <connections>
+                                    <action selector="clickGetHistory:" destination="Fq1-sD-hpQ" eventType="touchUpInside" id="hhR-0Q-M1G"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2ef-NL-d7l" firstAttribute="bottom" secondItem="nPr-Qp-Fr0" secondAttribute="bottom" constant="140" id="KW5-IQ-GsI"/>
+                            <constraint firstItem="2ef-NL-d7l" firstAttribute="bottom" secondItem="tvD-Xv-FtP" secondAttribute="bottom" constant="60" id="OIV-c1-HBD"/>
+                            <constraint firstItem="2ef-NL-d7l" firstAttribute="bottom" secondItem="yRe-n0-QnB" secondAttribute="bottom" constant="140" id="T1S-8z-WeU"/>
+                            <constraint firstItem="tvD-Xv-FtP" firstAttribute="centerX" secondItem="ynf-yB-4hq" secondAttribute="centerX" id="WBZ-jU-BxJ"/>
+                            <constraint firstItem="2ef-NL-d7l" firstAttribute="trailing" secondItem="yRe-n0-QnB" secondAttribute="trailing" constant="20" id="Wyv-ld-3iX"/>
+                            <constraint firstItem="nPr-Qp-Fr0" firstAttribute="leading" secondItem="2ef-NL-d7l" secondAttribute="leading" constant="20" id="h7g-r9-4Nn"/>
+                            <constraint firstItem="5Yz-aB-OxM" firstAttribute="centerX" secondItem="ynf-yB-4hq" secondAttribute="centerX" id="hwJ-fT-jaQ"/>
+                            <constraint firstItem="5Yz-aB-OxM" firstAttribute="top" secondItem="ynf-yB-4hq" secondAttribute="top" constant="68" id="hwf-JF-jhw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2ef-NL-d7l"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TE4-xk-rCQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yck-CJ-CM8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="805.79710144927537" y="157.36607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ytT-DM-q8M">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ijs-UF-Tyg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KqH-eQ-jLg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Fq1-sD-hpQ" kind="relationship" relationship="rootViewController" id="WqO-tv-15D"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="trk-9x-Mpv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-104.34782608695653" y="157.36607142857142"/>
+        </scene>
+    </scenes>
+</document>
